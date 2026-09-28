@@ -30,6 +30,7 @@ docs/
 
 ## 发布下载包
 
-`Downloads.vue` 取的是**本仓库**的 `releases/latest`：把 `PowerKit-Setup-vX.Y.Z-<arch>.exe`
-与 `PowerKit-vX.Y.Z-<arch>.zip` 作为 Release 附件传到这里，访客即可直接下载，无需登录。
-文件名里的 `Setup`/`arm64` 决定页面上的「安装版/便携版」「x64/ARM64」文案。
+`Downloads.vue` 取的是**本仓库**的 `releases/latest`。正常路径不需要手工传：主仓库
+`adam-ikari/powerkit` 打 `v*` 标签后，其 CI 的 `publish-site` 任务会把四份包同步到这里的
+同名 Release（靠主仓库的 `WEB_RELEASE_TOKEN` secret，一个只授权本仓库写 Contents 的
+fine-grained PAT）。文件名里的 `Setup`/`arm64` 决定页面上的「安装版/便携版」「x64/ARM64」文案。
